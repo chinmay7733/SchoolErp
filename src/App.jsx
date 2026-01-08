@@ -6,6 +6,7 @@ import TeacherDashboard from "./pages/dashboard/TeacherDashboard";
 import StudentDashboard from "./pages/dashboard/StudentDashboard";
 import ParentDashboard from "./pages/dashboard/ParentDashboard";
 import Applications from "./pages/Applications";
+import Semple from "./semple.jsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/applications" element={<Applications />} />
           </Routes>
         </main>
+        <Semple />
       </div>
     </BrowserRouter>
   );
