@@ -10,8 +10,12 @@ import {
 
 import studentImg from "../../assets/Image.png";
 import bgImg from "../../assets/IMAGE1.jpeg";
+import Container from "../../assets/Container.png";
+import Container2 from "../../assets/Container2.png";
+import Container3 from "../../assets/Container3.png";
 
 export default function AdminDashboard() {
+  
   const stats = [
     {
       title: "Total Students",
@@ -479,93 +483,271 @@ export default function AdminDashboard() {
         ))}
       </div>
 
-      {/* Donut (UI only) */}
-      <div className="flex justify-center">
-        <div className="relative w-32 h-32 rounded-full border-[16px] border-blue-600">
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <p className="text-sm font-semibold">3610</p>
-            <p className="text-[11px] text-gray-400">Present</p>
-          </div>
+<div className="flex justify-center items-center mt-4">
+  <div className="relative w-36 h-36">
 
-          <div className="absolute bottom-2 right-2 bg-white shadow rounded-full px-2 py-1 text-[10px]">
-            44 Absent
-          </div>
-        </div>
-      </div>
+    {/* Donut Ring */}
+    <div className="absolute inset-0 rounded-full border-[16px] border-blue-600"></div>
+
+    {/* Small Absent Slice */}
+    <div className="absolute top-4 right-5 w-4 h-4 rounded-full bg-green-400"></div>
+
+    {/* Center Text */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+      <p className="text-sm font-semibold leading-none">3610</p>
+      <p className="text-[11px] text-gray-400 mt-1">Present</p>
     </div>
 
-    {/* Notice Board */}
-    <div className="bg-white rounded-xl border p-4">
-      <div className="flex justify-between items-center mb-3">
-        <h3 className="text-sm font-semibold">Notice Board</h3>
-        <button className="text-xs text-blue-600">View All</button>
-      </div>
-
-      <div className="space-y-3">
-        {[
-          { title: "Online Classes Preparation", days: "02 Days" },
-          { title: "Exam Time Table Release", days: "06 Days" },
-          { title: "Exam Preparation Notification!", days: "12 Days" },
-          { title: "World Environment Day Program...!!!", days: "15 Days" },
-          { title: "New Syllabus Instructions", days: "20 Days" },
-        ].map((n, i) => (
-          <div key={i} className="flex justify-between text-xs">
-            <p className="text-gray-600">{n.title}</p>
-            <span className="text-gray-400">{n.days}</span>
-          </div>
-        ))}
-      </div>
+    {/* Absent Badge */}
+    <div className="absolute bottom-1 right-3 bg-white shadow rounded-full px-2 py-1 text-[10px] text-gray-600">
+      44 Absent
     </div>
+
   </div>
 
-  {/* ================= RIGHT : QUICK LINKS + FEES ================= */}
-  <div className="space-y-6">
-    {/* Quick Links */}
-    <div className="bg-white rounded-xl border p-4">
-      <h3 className="text-sm font-semibold mb-3">Quick Links</h3>
 
-      <div className="space-y-3">
-        {["Attendance", "Exams", "Reports"].map((q, i) => (
-          <div
-            key={i}
-            className="bg-blue-50 text-blue-600 text-sm py-4 rounded-lg text-center font-medium"
-          >
-            {q}
-          </div>
-        ))}
+
+  
+</div>
+    </div>  
+
+    <div className="bg-white rounded-xl border p-4">
+  {/* Header */}
+  <div className="flex items-center justify-between mb-4">
+    <h3 className="text-sm font-semibold">Notice Board</h3>
+    <button className="text-xs text-blue-600">View All</button>
+  </div>
+
+  <div className="space-y-4">
+    {/* Item 1 */}
+    <div className="flex items-start justify-between">
+      <div className="flex gap-3">
+        <div className="w-8 h-8 rounded-full bg-sky-100 flex items-center justify-center text-sky-600 text-xs">
+          🗒
+        </div>
+        <div>
+          <p className="text-sm font-medium">
+            Online Classes Preparation
+          </p>
+          <p className="text-xs text-gray-400">
+            Added on : 4 Oct 2025
+          </p>
+        </div>
       </div>
+      <span className="text-xs flex items-center gap-1 bg-gray-100 px-2 py-1 rounded">
+        ⏱ 02 Days
+      </span>
     </div>
 
-    {/* Fees Summary */}
-    <div className="bg-white rounded-xl border p-4 space-y-4">
-      {[
-        { title: "Total Fees Collected", value: "$25,000.02", up: true },
-        { title: "Fine Collected till date", value: "$4,56,64", up: false },
-        { title: "Student Not Paid", value: "545", up: true },
-        { title: "Total Outstanding", value: "$4,56,64", up: false },
-      ].map((f, i) => (
-        <div key={i}>
-          <p className="text-xs text-gray-400">{f.title}</p>
-          <div className="flex justify-between items-center">
-            <p className="font-semibold">{f.value}</p>
-            <span
-              className={`text-xs px-2 py-0.5 rounded ${
-                f.up
-                  ? "bg-green-100 text-green-600"
-                  : "bg-red-100 text-red-600"
-              }`}
-            >
-              {f.up ? "↑ 1.2%" : "↓ 1.5%"}
-            </span>
-          </div>
+    {/* Item 2 */}
+    <div className="flex items-start justify-between">
+      <div className="flex gap-3">
+        <div className="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 text-xs">
+          📄
         </div>
-      ))}
+        <div>
+          <p className="text-sm font-medium">
+            Exam Time Table Release
+          </p>
+          <p className="text-xs text-gray-400">
+            Added on : 30 Sep 2025
+          </p>
+        </div>
+      </div>
+      <span className="text-xs flex items-center gap-1 bg-gray-100 px-2 py-1 rounded">
+        ⏱ 06 Days
+      </span>
+    </div>
+
+    {/* Item 3 */}
+    <div className="flex items-start justify-between">
+      <div className="flex gap-3">
+        <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 text-xs">
+          🔔
+        </div>
+        <div>
+          <p className="text-sm font-medium">
+            Exam Preparation Notification!
+          </p>
+          <p className="text-xs text-gray-400">
+            Added on : 23 Sep 2025
+          </p>
+        </div>
+      </div>
+      <span className="text-xs flex items-center gap-1 bg-gray-100 px-2 py-1 rounded">
+        ⏱ 12 Days
+      </span>
+    </div>
+
+    {/* Item 4 */}
+    <div className="flex items-start justify-between">
+      <div className="flex gap-3">
+        <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">
+          🌱
+        </div>
+        <div>
+          <p className="text-sm font-medium">
+            World Environment Day Program.....!!!
+          </p>
+          <p className="text-xs text-gray-400">
+            Added on : 19 Sep 2025
+          </p>
+        </div>
+      </div>
+      <span className="text-xs flex items-center gap-1 bg-gray-100 px-2 py-1 rounded">
+        ⏱ 15 Days
+      </span>
+    </div>
+
+    {/* Item 5 */}
+    <div className="flex items-start justify-between">
+      <div className="flex gap-3">
+        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xs">
+          📘
+        </div>
+        <div>
+          <p className="text-sm font-medium">
+            New Syllabus Instructions
+          </p>
+          <p className="text-xs text-gray-400">
+            Added on : 16 Sep 2025
+          </p>
+        </div>
+      </div>
+      <span className="text-xs flex items-center gap-1 bg-gray-100 px-2 py-1 rounded">
+        ⏱ 20 Days
+      </span>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div className="space-y-6">
+   
+
+<div className="bg-white rounded-xl  p-4">
+  <h3 className="text-sm font-semibold mb-4">Quick Links</h3>
+
+  <div className="space-y-4">
+    {/* Attendance */}
+    <div className="bg-yellow-50 rounded-xl py-6 flex flex-col items-center">
+      <div className="w-12 h-12 rounded-full border-2 border-yellow-400 flex items-center justify-center mb-2">
+        <img
+          src={Container2}
+          alt="Attendance"
+          className="w-12 h-12"
+        />
+      </div>
+      <p className="text-sm font-medium text-gray-800">
+        Attendance
+      </p>
+    </div>
+
+    {/* Exams */}
+    <div className="bg-cyan-50 rounded-xl py-6 flex flex-col items-center">
+      <div className="w-12 h-12 rounded-full border-2 border-cyan-400 flex items-center justify-center mb-2">
+        <img
+          src={Container}
+          alt="Exams"
+          className="w-12 h-12"
+        />
+      </div>
+      <p className="text-sm font-medium text-gray-800">
+        Exams
+      </p>
+    </div>
+
+    {/* Reports */}
+    <div className="bg-sky-50 rounded-xl py-6 flex flex-col items-center">
+      <div className="w-12 h-12 rounded-full border-2 border-sky-500 flex items-center justify-center mb-2">
+        <img
+          src={Container3}
+          alt="Reports"
+          className="w-12 h-12"
+        />
+      </div>
+      <p className="text-sm font-medium text-gray-800">
+        Reports
+      </p>
     </div>
   </div>
 </div>
 
 
+    {/* Fees Summary */}
+   {/* ================= FEES SUMMARY ================= */}
+<div className="space-y-3">
 
-    </div>  );
+  {/* Total Fees Collected */}
+  <div className="bg-white rounded-xl border p-4 flex justify-between items-center">
+    <div>
+      <p className="text-xs text-gray-400">
+        Total Fees Collected
+      </p>
+      <p className="text-lg font-semibold text-gray-800">
+        $25,000.02
+      </p>
+    </div>
 
+    <span className="text-xs bg-green-100 text-green-600 px-2 py-1 rounded">
+      ↑ 1.2%
+    </span>
+  </div>
+
+  {/* Fine Collected till date */}
+  <div className="bg-white rounded-xl border p-4 flex justify-between items-center">
+    <div>
+      <p className="text-xs text-gray-400">
+        Fine Collected till date
+      </p>
+      <p className="text-lg font-semibold text-gray-800">
+        $4,56,64
+      </p>
+    </div>
+
+    <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">
+      ↓ 1.5%
+    </span>
+  </div>
+
+  {/* Student Not Paid */}
+  <div className="bg-white rounded-xl border p-4 flex justify-between items-center">
+    <div>
+      <p className="text-xs text-gray-400">
+        Student Not Paid
+      </p>
+      <p className="text-lg font-semibold text-gray-800">
+        545
+      </p>
+    </div>
+
+    <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">
+      ↑ 1.5%
+    </span>
+  </div>
+
+  {/* Total Outstanding */}
+  <div className="bg-white rounded-xl border p-4 flex justify-between items-center">
+    <div>
+      <p className="text-xs text-gray-400">
+        Total Outstanding
+      </p>
+      <p className="text-lg font-semibold text-gray-800">
+        $4,56,64
+      </p>
+    </div>
+
+    <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">
+      ↓ 1.5%
+    </span>
+  </div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+);
 }
