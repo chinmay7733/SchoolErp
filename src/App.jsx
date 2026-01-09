@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="flex h-screen">
         <Sidebar />
-
+        
         {/* MAIN CONTENT */}
         <main className="flex-1 p-6 bg-gray-100">
           <Routes>

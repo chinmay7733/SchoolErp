@@ -165,7 +165,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="lg:hidden flex items-center justify-between px-4 py-3 border-b bg-white">
+      <div className="lg:hidden flex items-center justify-between px-4 py-3 border-b bg-white absolute w-full z-30">
         <button onClick={() => setIsOpen(true)}>
           <HiMenu size={24} />
         </button>
