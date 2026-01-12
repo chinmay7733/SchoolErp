@@ -6,6 +6,7 @@ import TeacherDashboard from "./pages/dashboard/TeacherDashboard";
 import StudentDashboard from "./pages/dashboard/StudentDashboard";
 import ParentDashboard from "./pages/dashboard/ParentDashboard";
 import Applications from "./pages/Applications";
+
 function App() {
   return (
     <BrowserRouter>
